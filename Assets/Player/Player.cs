@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Player : MonoBehaviour
 {
@@ -11,13 +13,22 @@ public class Player : MonoBehaviour
     public float maxUpSpeed = 6f;     // caps how fast you can rise
     public float maxFallSpeed = 12f;  // caps how fast you can fall (separate from rise cap)
 
+    public TMP_Text flapText;
+
+
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
     void Start()
     {
+        
+        // Guaranteed to find the player instance
+        flapText = GameObject.FindGameObjectWithTag("FlapsUI").GetComponent<TMP_Text>();
+
+
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        flapText.text = "Flaps: " + numFlaps;
     }
 
     void Update() {
@@ -27,6 +38,7 @@ public class Player : MonoBehaviour
             // whether you were falling, stationary, or already rising
             rb.velocity = new Vector2(rb.velocity.x, flapSpeed);
             numFlaps--;
+            flapText.text = "Flaps: " + numFlaps;
         }
     }   
 
@@ -48,6 +60,11 @@ public class Player : MonoBehaviour
             sr.flipX = false;
         else if (input < 0)
             sr.flipX = true;
+
+
+
+        
+
     }
 
 }
