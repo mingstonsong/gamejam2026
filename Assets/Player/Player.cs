@@ -1,40 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerPhysicsMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
-    public float jumpForce = 7.0f;
-
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    public float moveForce;
+    public float maxHorizontalSpeed;
+    public int numFlaps = 3;
+    public float flapForce = 8f;
+    public float maxUpSpeed = 6f;     // caps how fast you can rise
+    public float maxFallSpeed = 12f;  // caps how fast you can fall (separate from rise cap)
 
     private Rigidbody2D rb;
-    private float moveX;
-    private bool isGrounded;
+    private SpriteRenderer sr;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.freezeRotation = true;
+        sr = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
-    {
-        moveX = Input.GetAxisRaw("Horizontal");
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, groundMask);
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space) && numFlaps > 0)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * flapForce, ForceMode2D.Impulse);
+            numFlaps--;
+
+            // Immediately clamp so a rapid second flap can't stack past the cap
+            if (rb.velocity.y > maxUpSpeed)
+                rb.velocity = new Vector2(rb.velocity.x, maxUpSpeed);
         }
-    }
+    }   
 
     void FixedUpdate()
     {
-        Vector2 velocity = rb.velocity; // Unity 2022: use .velocity, not .linearVelocity
-        velocity.x = moveX * moveSpeed;
-        rb.velocity = velocity;
+        float input = Input.GetAxisRaw("Horizontal");
+
+        rb.AddForce(Vector2.right * input * moveForce, ForceMode2D.Force);
+
+        // Clamp horizontal velocity
+        float clampedX = Mathf.Clamp(rb.velocity.x, -maxHorizontalSpeed, maxHorizontalSpeed);
+        // Clamp vertical velocity: rise capped by maxUpSpeed, fall capped by maxFallSpeed
+        float clampedY = Mathf.Clamp(rb.velocity.y, -maxFallSpeed, maxUpSpeed);
+
+        rb.velocity = new Vector2(clampedX, clampedY);
+
+        // Flip sprite without changing size
+        if (input > 0)
+            sr.flipX = false;
+        else if (input < 0)
+            sr.flipX = true;
     }
+
 }
