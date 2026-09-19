@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class shoot : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public Transform firePoint;     // where bullets spawn from
-    public float fireRate = 0.25f;  // seconds between shots
+   public GameObject bulletPrefab;
+    public Transform firePoint;
 
-    private float nextFireTime = 0f;
+    [Header("Timing")]
+    public float minDelay = 1f;     // shortest wait between volleys
+    public float maxDelay = 3f;     // longest wait between volleys
 
-    // Update is called once per frame
-    void Update()
+    [Header("Burst")]
+    public int shotsPerBurst = 3;   // set to 1 for single shots
+    public float burstSpacing = 0.15f;
+
+    void Start()
     {
-        if (Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime)
-        {
-            Shoot();
-            nextFireTime = Time.time + fireRate;
-        }
+        StartCoroutine(FireLoop());
     }
 
-    void Shoot()
+    System.Collections.IEnumerator FireLoop()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
+
+            for (int i = 0; i < shotsPerBurst; i++)
+            {
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                yield return new WaitForSeconds(burstSpacing);
+            }
+        }
     }
 }
