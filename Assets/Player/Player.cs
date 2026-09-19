@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public float moveForce;
     public float maxHorizontalSpeed;
     public int numFlaps = 3;
-    public float flapForce = 8f;
+    public float flapSpeed = 8f;      // renamed: this is now a target velocity, not a force
     public float maxUpSpeed = 6f;     // caps how fast you can rise
     public float maxFallSpeed = 12f;  // caps how fast you can fall (separate from rise cap)
 
@@ -23,12 +23,10 @@ public class Player : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space) && numFlaps > 0)
         {
-            rb.AddForce(Vector2.up * flapForce, ForceMode2D.Impulse);
+            // Set velocity directly instead of adding to it — always the same flap,
+            // whether you were falling, stationary, or already rising
+            rb.velocity = new Vector2(rb.velocity.x, flapSpeed);
             numFlaps--;
-
-            // Immediately clamp so a rapid second flap can't stack past the cap
-            if (rb.velocity.y > maxUpSpeed)
-                rb.velocity = new Vector2(rb.velocity.x, maxUpSpeed);
         }
     }   
 

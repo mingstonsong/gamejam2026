@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2483369, y: 0.83700794, z: -0.018462075}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -50,7 +50,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.3
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -94,8 +94,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005, y: -0.01}
-  m_Size: {x: 0.2, y: 0.2}
+  m_Offset: {x: 0.03, y: -0.09}
+  m_Size: {x: 1.2, y: 1.2}
   m_Direction: 0
 --- !u!212 &6810350049515337614
 SpriteRenderer:
@@ -161,9 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7192eab7c7f610b4fb3a3360d8e67a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 4
-  maxHorizontalSpeed: 2.7
+  moveForce: 10
+  maxHorizontalSpeed: 5
   numFlaps: 100
-  flapForce: 3
-  maxUpSpeed: 4
-  maxFallSpeed: 12
+  flapSpeed: 20
+  maxUpSpeed: 7
+  maxFallSpeed: 15
