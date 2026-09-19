@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,22 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SnowyPlatforms_1
+      name: SnowyPlatforms_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 45
+        x: 0
+        y: 48
         width: 16
-        height: 1
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5064a1b807d7c4a7faa43021bd107681
-      internalID: 1916441713
+      spriteID: 912d353ee22865d44b47cb961bb708f3
+      internalID: 1776662062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d4e88679cc0e7419ab21e9791b6a39
+      internalID: 59609368
       vertices: []
       indices: 
       edges: []
@@ -139,14 +160,56 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee98ac16e2deb4bb59e72d4ab220e1cb
-      internalID: -833399742
+      spriteID: d7d3a849918c1bb4dabf5dfb8ed1e3aa
+      internalID: -1087247135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535588c25b5c17848b13174b4fce7cbf
+      internalID: 1502645608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e7ed1ed9948de44a8b615bca912283
+      internalID: 753583747
       vertices: []
       indices: 
       edges: []
@@ -158,16 +221,16 @@ TextureImporter:
         x: 16
         y: 32
         width: 16
-        height: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4e1ce74519994c5a840836bd2f18a3e
-      internalID: 1986505513
+      spriteID: c9a05594818919d41ac2c56f40b28493
+      internalID: -88630907
       vertices: []
       indices: 
       edges: []
@@ -181,14 +244,35 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47ed219d7f6b84cc59b013e5fbb75ed4
-      internalID: 806811333
+      spriteID: f8bc773865c14784a8756601ca297fe0
+      internalID: 1700258547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e66bccf45392c64ba7838ade9e00fa0
+      internalID: -1039894819
       vertices: []
       indices: 
       edges: []
@@ -202,14 +286,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b43d8c660b2aa41e6af486afa68715a4
-      internalID: -1691667141
+      spriteID: 32724bb1d32cab64ea93140e1f32e24c
+      internalID: -1026254563
       vertices: []
       indices: 
       edges: []
@@ -223,14 +307,56 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 751e2afd7e4584cd7adf16ba78d1ab25
-      internalID: -1879173384
+      spriteID: 1e1e8e715aa46ac459398261a8fc9a34
+      internalID: 1455312915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2c0d3d3ef12fb409a76acf7b6644d2
+      internalID: 1853864758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64927b3885895444898015c2ca06f95d
+      internalID: -469613534
       vertices: []
       indices: 
       edges: []
@@ -244,14 +370,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e6020ee14c01431eb316bf6f06d8b48
-      internalID: -630201911
+      spriteID: c44cbcc76711b904ab802f1535d1846e
+      internalID: -733845
       vertices: []
       indices: 
       edges: []
@@ -265,14 +391,56 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51f3d8752a5b946cc824c1748d9f8095
-      internalID: -1984996729
+      spriteID: f82a07ea8d70e2149a055837e4d22d39
+      internalID: 679732912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812d26bf616618041b0966556feff257
+      internalID: 1229995213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowyPlatforms_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910c15d9b92b3d6408e0ad87b79ca3d9
+      internalID: 2050212597
       vertices: []
       indices: 
       edges: []
@@ -288,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SnowyPlatforms_0: 742169737
-      SnowyPlatforms_1: 1916441713
-      SnowyPlatforms_10: -1249905198
-      SnowyPlatforms_11: 2068620425
-      SnowyPlatforms_12: -630201911
-      SnowyPlatforms_13: -1984996729
-      SnowyPlatforms_14: 207588782
-      SnowyPlatforms_15: -357144485
-      SnowyPlatforms_2: -833399742
-      SnowyPlatforms_3: -1921394988
-      SnowyPlatforms_4: -450893533
-      SnowyPlatforms_5: 1986505513
-      SnowyPlatforms_6: 806811333
-      SnowyPlatforms_7: 982653795
-      SnowyPlatforms_8: -1691667141
-      SnowyPlatforms_9: -1879173384
+      SnowyPlatforms_0: 1776662062
+      SnowyPlatforms_1: 59609368
+      SnowyPlatforms_10: 1853864758
+      SnowyPlatforms_11: -469613534
+      SnowyPlatforms_12: -733845
+      SnowyPlatforms_13: 679732912
+      SnowyPlatforms_14: 1229995213
+      SnowyPlatforms_15: 2050212597
+      SnowyPlatforms_2: -1087247135
+      SnowyPlatforms_3: 1502645608
+      SnowyPlatforms_4: 753583747
+      SnowyPlatforms_5: -88630907
+      SnowyPlatforms_6: 1700258547
+      SnowyPlatforms_7: -1039894819
+      SnowyPlatforms_8: -1026254563
+      SnowyPlatforms_9: 1455312915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
