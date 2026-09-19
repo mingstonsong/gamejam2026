@@ -12,13 +12,13 @@ public class LevelEndSquare : MonoBehaviour
     private SpriteRenderer sr;
     private TextMeshPro countText;
     private CarcinogenHandler carcinogenHandler;
-    private EvolvingIntroSequence introSequence; // optional, only present on this one scene's instance
+    private IIntroSequence introSequence; // any script implementing IIntroSequence
 
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         countText = GetComponentInChildren<TextMeshPro>();
-        introSequence = GetComponent<EvolvingIntroSequence>();
+        introSequence = GetComponent<IIntroSequence>();
     }
 
     private void OnEnable()
@@ -53,12 +53,10 @@ public class LevelEndSquare : MonoBehaviour
         {
             if (introSequence != null)
             {
-                // This scene has a special intro sequence — let it handle everything
                 introSequence.PlaySequence(nextSceneName);
             }
             else
             {
-                // Every other scene: just load immediately, as before
                 SceneManager.LoadScene(nextSceneName);
             }
         }
