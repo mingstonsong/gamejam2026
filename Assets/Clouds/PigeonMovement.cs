@@ -12,35 +12,35 @@ public class PigeonMovement : MonoBehaviour
     private Vector3 leftTarget;
     private Vector3 rightTarget;
     private Vector3 currentTarget;
-    private bool movingRight = false; 
-
+    private SpriteRenderer sr;
 
     void Start()
     {
-        // Calculate the boundaries based on the starting position
+        sr = GetComponent<SpriteRenderer>();
+
         leftTarget = transform.position + Vector3.left * moveDistance;
         rightTarget = transform.position + Vector3.right * moveDistance;
-        
-        // Start by moving toward the right
+
         currentTarget = leftTarget;
+        sr.flipX = false; // matches "moving left" at the start — flip if it looks backwards
     }
 
     void Update()
-{
-    transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
-
-    if (Vector3.Distance(transform.position, currentTarget) < 0.01f)
     {
-        movingRight = !movingRight;
-        currentTarget = movingRight ? rightTarget : leftTarget;
-        Flip();
-    }
-}
+        transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
 
-void Flip()
-{
-    Vector3 scale = transform.localScale;
-    scale.x = Mathf.Sign(currentTarget.x - transform.position.x) * Mathf.Abs(scale.x);
-    transform.localScale = scale;
-}
+        if (Vector3.Distance(transform.position, currentTarget) < 0.01f)
+        {
+            if (currentTarget == rightTarget)
+            {
+                currentTarget = leftTarget;
+                sr.flipX = false;
+            }
+            else
+            {
+                currentTarget = rightTarget;
+                sr.flipX = true;
+            }
+        }
+    }
 }
