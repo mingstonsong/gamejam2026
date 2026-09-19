@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EvolvingIntroSequence : MonoBehaviour, IIntroSequence
+public class SubsequentEvolvingIntroSequence : MonoBehaviour, IIntroSequence
 {
     public float lineDelay = 0.5f; // unscaled seconds between each line
 
@@ -10,6 +10,7 @@ public class EvolvingIntroSequence : MonoBehaviour, IIntroSequence
     private GameObject line1;
     private GameObject line2;
     private GameObject line3;
+    private GameObject line4;
     private GameObject continuePrompt;
 
     private bool waitingForContinue = false;
@@ -18,9 +19,10 @@ public class EvolvingIntroSequence : MonoBehaviour, IIntroSequence
 
     private void Start()
     {
-        evolvingPanel = GameObject.FindGameObjectWithTag("EvolvingTextUI");
+        evolvingPanel = GameObject.FindGameObjectWithTag("SubsequentEvolvingTextUI");
         line1 = evolvingPanel.transform.Find("Line1").gameObject;
         line2 = evolvingPanel.transform.Find("Line2").gameObject;
+        line4 = evolvingPanel.transform.Find("Line4").gameObject;
         line3 = evolvingPanel.transform.Find("Line3").gameObject;
         continuePrompt = evolvingPanel.transform.Find("ContinuePrompt").gameObject;
 
@@ -53,6 +55,7 @@ public class EvolvingIntroSequence : MonoBehaviour, IIntroSequence
     {
         line1.SetActive(false);
         line2.SetActive(false);
+        line4.SetActive(false);
         line3.SetActive(false);
         continuePrompt.SetActive(false);
 
@@ -61,9 +64,13 @@ public class EvolvingIntroSequence : MonoBehaviour, IIntroSequence
 
         line2.SetActive(true);
         yield return new WaitForSecondsRealtime(lineDelay);
+        
+        line4.SetActive(true);
+        yield return new WaitForSecondsRealtime(lineDelay);
 
         line3.SetActive(true);
         yield return new WaitForSecondsRealtime(lineDelay);
+        
 
         continuePrompt.SetActive(true);
         waitingForContinue = true;

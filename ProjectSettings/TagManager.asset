@@ -9,6 +9,7 @@ TagManager:
   - CarcinogenCounterUI
   - CarcinogenHandler
   - EvolvingTextUI
+  - SubsequentEvolvingTextUI
   layers:
   - Default
   - TransparentFX
