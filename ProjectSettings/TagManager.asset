@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - FlapsUI
+  - Carcinogen
+  - CarcinogenCounterUI
+  - CarcinogenHandler
+  - EvolvingTextUI
   layers:
   - Default
   - TransparentFX
@@ -47,4 +51,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: water
+    uniqueID: 4094875457
     locked: 0
