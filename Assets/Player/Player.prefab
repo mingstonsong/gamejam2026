@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2282938443218982393}
   - component: {fileID: 6810350049515337614}
   - component: {fileID: 7182031053794474977}
+  - component: {fileID: -3786428887017679866}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -167,3 +168,26 @@ MonoBehaviour:
   flapSpeed: 20
   maxUpSpeed: 7
   maxFallSpeed: 15
+  flapText: {fileID: 0}
+  anim: {fileID: -3786428887017679866}
+--- !u!95 &-3786428887017679866
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427136974327102142}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7dc7b156d7fd6f9489e56605ac378dce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

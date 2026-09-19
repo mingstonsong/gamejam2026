@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
 
+    public Animator anim;
+
     void Start()
     {
         
@@ -60,10 +62,12 @@ public class Player : MonoBehaviour
             sr.flipX = false;
         else if (input < 0)
             sr.flipX = true;
-
-
-
         
+        bool verticalVelocityIsZero = Mathf.Abs(rb.velocity.y) < 0.05f;
+
+        // Running and jumping animation
+        anim.SetBool("isRunning",verticalVelocityIsZero && input != 0);
+        anim.SetBool("isFalling",rb.velocity.y < -0.05f);
 
     }
 
