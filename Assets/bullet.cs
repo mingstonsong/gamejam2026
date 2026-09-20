@@ -20,4 +20,13 @@ public class bullet : MonoBehaviour
         // moves in the direction the bullet is facing ("up" in its own space)
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Player"))
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+}
 }
