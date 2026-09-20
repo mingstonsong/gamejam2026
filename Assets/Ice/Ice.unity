@@ -529,7 +529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182031053794474977, guid: 7236cf3afc3d4f2428d0bf9b32400c5f, type: 3}
       propertyPath: numFlaps
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
