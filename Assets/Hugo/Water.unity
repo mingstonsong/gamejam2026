@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7253081038557225170, guid: c0bdd7713d24dfe48984435cf9a7b486, type: 3}
       propertyPath: nextSceneName
-      value: Test
+      value: Ice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
