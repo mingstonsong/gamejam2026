@@ -5,7 +5,7 @@ using UnityEngine;
 public class jiggle : MonoBehaviour
 {
     // Start is called before the first frame update
-public float jiggleAmount = 1000f; // how far it moves side to side
+public float jiggleAmount = 100f; // how far it moves side to side
     public float jiggleSpeed = 5f;    // how fast it jiggles
 
     private Vector3 startPos;
