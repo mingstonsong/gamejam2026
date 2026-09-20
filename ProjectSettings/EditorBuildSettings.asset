@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hugo/Test.unity
     guid: 1b81a016e9fdcde48a0acda38d3937c9
+  - enabled: 1
+    path: Assets/Ice/Ice.unity
+    guid: 207ef371d0d249d439134fd1f016eb24
   m_configObjects: {}
