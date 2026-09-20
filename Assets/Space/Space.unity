@@ -2906,19 +2906,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1462596002174315755, guid: 85126ab06c9e24f4b85242ce90038b65, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -656
+      value: -657
       objectReference: {fileID: 0}
     - target: {fileID: 1462596002174315755, guid: 85126ab06c9e24f4b85242ce90038b65, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -453
+      value: -422
       objectReference: {fileID: 0}
     - target: {fileID: 5220902625670491942, guid: 85126ab06c9e24f4b85242ce90038b65, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -655
+      value: -656
       objectReference: {fileID: 0}
     - target: {fileID: 5220902625670491942, guid: 85126ab06c9e24f4b85242ce90038b65, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -370
+      value: -339
       objectReference: {fileID: 0}
     - target: {fileID: 7625576766032507058, guid: 85126ab06c9e24f4b85242ce90038b65, type: 3}
       propertyPath: m_Pivot.x
