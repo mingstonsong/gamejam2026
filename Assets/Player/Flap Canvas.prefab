@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 327297130952996717}
   m_Layer: 5
   m_Name: Flap Canvas
-  m_TagString: Untagged
+  m_TagString: FlapsUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

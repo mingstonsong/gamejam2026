@@ -55,8 +55,8 @@ public class SubsequentEvolvingIntroSequence : MonoBehaviour, IIntroSequence
     {
         line1.SetActive(false);
         line2.SetActive(false);
-        line4.SetActive(false);
         line3.SetActive(false);
+        line4.SetActive(false);
         continuePrompt.SetActive(false);
 
         line1.SetActive(true);
@@ -65,12 +65,12 @@ public class SubsequentEvolvingIntroSequence : MonoBehaviour, IIntroSequence
         line2.SetActive(true);
         yield return new WaitForSecondsRealtime(lineDelay);
         
-        line4.SetActive(true);
-        yield return new WaitForSecondsRealtime(lineDelay);
 
         line3.SetActive(true);
         yield return new WaitForSecondsRealtime(lineDelay);
         
+        line4.SetActive(true);
+        yield return new WaitForSecondsRealtime(lineDelay);
 
         continuePrompt.SetActive(true);
         waitingForContinue = true;

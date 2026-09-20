@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Player/HugoScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Hugo/Water.unity
+    guid: 1997b6bfebb444b4ea1e2eb1baac708b
+  - enabled: 1
+    path: Assets/Clouds/Clouds.unity
+    guid: 57baabcc7087e7e4598a9788629cd097
+  - enabled: 1
+    path: Assets/Hugo/Test.unity
+    guid: 1b81a016e9fdcde48a0acda38d3937c9
   m_configObjects: {}
