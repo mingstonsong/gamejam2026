@@ -10,6 +10,7 @@ TagManager:
   - CarcinogenHandler
   - EvolvingTextUI
   - SubsequentEvolvingTextUI
+  - laser
   layers:
   - Default
   - TransparentFX
