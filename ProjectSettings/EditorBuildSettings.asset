@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ice/Ice.unity
     guid: 207ef371d0d249d439134fd1f016eb24
+  - enabled: 1
+    path: Assets/Space/Space.unity
+    guid: 0ef9f88c6343a0549978129801e18ec2
+  - enabled: 1
+    path: Assets/Mars/Mars.unity
+    guid: 0815adb65fc162d4f81e07d03c10e799
   m_configObjects: {}
