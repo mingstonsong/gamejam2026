@@ -11,7 +11,8 @@ public class DeathZone : MonoBehaviour
         {
             if (other.TryGetComponent<PlayerRespawn>(out PlayerRespawn player))
             {
-                player.Respawn();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
             }
             else
             {
